@@ -9,7 +9,7 @@ def puissance(a, b):
     # Calcul de a**b
     i=0
     resultat=a
-    for i in range (0,b):
+    for i in range (1,b):
     	resultat = resultat*a
     	i=i+1
     return resultat
