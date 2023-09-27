@@ -7,7 +7,11 @@ def puissance(a, b):
     	raise TypeError("Les deux arguments doivent être des entiers.")
     
     # Calcul de a**b
-    resultat = a ** b
+    i=0
+    resultat=a
+    for i in range (0,b):
+    	resultat = resultat*a
+    	i=i+1
     return resultat
 
 
