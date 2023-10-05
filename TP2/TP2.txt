@@ -14,12 +14,56 @@ La commande git blame sert à afficher les informations de responsabilité
 Nous pouvons connaitre qui a éffectué la moindre modification. 
 
 1.4 - Qui a commité la ligne 329 :
+3e5d1596 (Jake Ginnivan      2014-06-17 21:47:47 +0100 329)             name: 'Tag',
+La réponse est Jake Ginnivan
 
 Q1.5 - Notez le hash de ce commit :
-
+Le hash est 3e5d1596
 Q1.6 - Avec la commande git show sur ce commit, notez le message de l’auteur du commit :
+Adding tag command reference
 
 Q1.7 - Date de ce commit :
+Date:   Tue Jun 17 21:47:47 2014 +0100
 
-Q1.8 - En vous aidant de la commande git log <tag>, donner le hash du commit correspondant au
-tag de la version 1.0.0
+Q1.8 - 
+Le tag est : tag: v1.0.0
+Le hash du commit est : 294c63b9653d93caefdd233da52fc0cd6ca95268 
+
+Q1.9 - Avec git show, qui est l’auteur de ce commit ?
+Author: Wei Wang <weiwang85@gmail.com>
+
+Date ?
+Date:   Tue Jan 6 17:14:04 2015 -0500
+
+Q1.10 - git log --oneline | wc -l
+et le résultat :
+Le résultat est 91
+
+Q1.11 -
+Quelle est la différence ?
+La différence est que git log utilise le format référence qui nous permet d'avoir la date en plus
+Cependant il n'y a pas de grande différence entre ces 2 commandes 
+
+Q1.12 - La commande est : git log --format="%an"
+
+Q1.13 - On remarque que les résultat est 10 car le créateur apparait 2 fois
+     sous le nom de 64 Wei Wang  et 2 onlywei
+     14 Jake Ginnivan
+      3 Aurélien Pelletier
+      2 SoonDead
+      2 Derek Boone
+      1 Tae Won Ha
+      1 tabatkins
+      1 Kaitlin Hipkin
+      1 Brent Beer
+
+
+2 Création de branches
+Q2.1 - git status
+
+
+Q2.2 - Branche par défaut : master
+
+Q2.3 - 
+Q2.4 -
+
