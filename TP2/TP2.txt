@@ -64,6 +64,6 @@ Q2.1 - git status
 
 Q2.2 - Branche par défaut : master
 
-Q2.3 - 
-Q2.4 -
+Q2.5 - Non
+
 
