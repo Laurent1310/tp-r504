@@ -73,5 +73,5 @@ Q2.7 - git diff me montre la commande qui a été ajouté pour ajouter l'image �
 
 Q3.1 Non sauf si j'utilise fork
 
-
+Q3.3 Non il est nécéssaire d'envoyer une proposition au proprietaire 
 
