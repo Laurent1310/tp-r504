@@ -1,0 +1,5 @@
+Q1.1 - Combien y a-t-il de contributeurs ? (d’après Github)
+9 Contributors
+
+1.2 - Clonez le projet dans votre "home", en mesurant le temps :
+uel place occupe-t-il sur le disque ?
