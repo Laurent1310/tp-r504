@@ -2,4 +2,11 @@ Q1.1 - Combien y a-t-il de contributeurs ? (d’après Github)
 9 Contributors
 
 1.2 - Clonez le projet dans votre "home", en mesurant le temps :
-uel place occupe-t-il sur le disque ?
+Quel place occupe-t-il sur le disque ?
+du -sh explain-git-with-d3/
+408K	explain-git-with-d3/
+
+Q1.3 - Lancer la commande git blame sur le fichier index.html
+En vous aidant de git help blame, expliquer en une phrase à quoi sert cette commande 
+
+La commande git blame sert à afficher les informations de responsabilité
