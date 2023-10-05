@@ -10,3 +10,16 @@ Q1.3 - Lancer la commande git blame sur le fichier index.html
 En vous aidant de git help blame, expliquer en une phrase à quoi sert cette commande 
 
 La commande git blame sert à afficher les informations de responsabilité
+(auteurs et révisions) associées à chaque ligne d'un fichier donné.
+Nous pouvons connaitre qui a éffectué la moindre modification. 
+
+1.4 - Qui a commité la ligne 329 :
+
+Q1.5 - Notez le hash de ce commit :
+
+Q1.6 - Avec la commande git show sur ce commit, notez le message de l’auteur du commit :
+
+Q1.7 - Date de ce commit :
+
+Q1.8 - En vous aidant de la commande git log <tag>, donner le hash du commit correspondant au
+tag de la version 1.0.0
