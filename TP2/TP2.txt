@@ -66,4 +66,12 @@ Q2.2 - Branche par défaut : master
 
 Q2.5 - Non
 
+Q2.7 - git diff me montre la commande qui a été ajouté pour ajouter l'image à index.html
+
+
+3 Création d’un "Pull-request"
+
+Q3.1 Non sauf si j'utilise fork
+
+
 
