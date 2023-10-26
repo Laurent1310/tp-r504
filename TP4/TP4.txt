@@ -1,0 +1,27 @@
+TP4
+
+Q2.1
+#!/bin/bash
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+Q2.2
+#!/bin/bash
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker network prune -f
+docker volume prune -f
+
+Q2.3
+#!/bin/bash
+docker network create --driver bridge net-tp4
+
+Q2.4
+# lancement serveur sql
+docker run --rm -d \
+-p 3307:3306 \
+-v vol−sql−demo : / var/lib/mysql \
+--name tp4−sql \
+--env MYSQL_ROOT_PASSWORD=foo \
+--network net−tp4 \
+mysql
