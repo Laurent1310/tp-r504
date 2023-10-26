@@ -19,9 +19,27 @@ docker network create --driver bridge net-tp4
 Q2.4
 # lancement serveur sql
 docker run --rm -d \
--p 3307:3306 \
--v vol−sql−demo : / var/lib/mysql \
---name tp4−sql \
---env MYSQL_ROOT_PASSWORD=foo \
---network net−tp4 \
-mysql
+	-p 3307:3306 \
+	-v vol-sql-demo:/var/lib/mysql \
+	--name tp4-sql \
+	--env MYSQL_ROOT_PASSWORD=foo \
+	--network net-tp4 \
+	mysql
+
+
+Q2.5
+CREATE DATABASE demosql;
+USE demosql;
+CREATE TABLE myTable(id int AUTO_INCREMENT, name varchar(45) NOT NULL,
+	PRIMARY KEY (id) );
+INSERT INTO myTable (id , name ) VALUES (NULL,'bob');
+INSERT INTO myTable (id , name ) VALUES (NULL,'alice');
+
+
+Q2.9
+
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+debian       11        7fc304c3e97a   2 weeks ago   124MB
+
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+im-tp4       latest    dce093186a34   2 minutes ago   795MB
