@@ -1,0 +1,9 @@
+Q2.3
+Pourquoi le "load-balancing" ne semble pas fonctionner avec un navigateur, alors qu’on voit bien le
+fonctionnement avec curl ?
+
+Le problème pourrait être lié à la mise en cache du navigateur. 
+Les navigateurs modernes ont tendance à conserver la connexion avec le même serveur lorsqu'ils font plusieurs requêtes vers le même domaine,
+même si le domaine est censé être équilibré. 
+Cela peut entraîner une absence apparente de répartition de charge lors de l'accès via le navigateur.
+

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  s-app:
+    build: ./appli
+    ports:
+      - "5000"
+
+  s-nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
