@@ -1,0 +1,14 @@
+Q1.1 - Que se passe-t-il si on lance le client sans que le serveur ne soit actif :
+
+Si vous lancez le client sans que le serveur ne soit actif, 
+le client ne pourra pas envoyer le paquet au serveur, 
+et vous obtiendrez probablement une exception java.net.ConnectException 
+ou java.net.NoRouteToHostException. 
+
+Ces exceptions indiquent que le client n'a pas pu établir une connexion avec 
+le serveur parce que le serveur n'est pas actif ou n'est pas accessible.
+
+Q1.2 - Quel est le numéro de port utilisé :
+
+Le numéro de port utilisé est le 1234
+
