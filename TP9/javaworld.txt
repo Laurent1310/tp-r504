@@ -1,0 +1,20 @@
+HTTP/1.1 500 Domain Not Found
+Connection: close
+Content-Length: 228
+Server: Varnish
+Retry-After: 0
+content-type: text/html
+Cache-Control: private, no-cache
+X-Served-By: cache-lcy-eglc8600028-LCY
+Accept-Ranges: bytes
+Date: Mon, 22 Jan 2024 09:40:08 GMT
+Via: 1.1 varnish
+
+
+<html>
+<head>
+<title>Fastly error: unknown domain </title>
+</head>
+<body>
+<p>Fastly error: unknown domain: . Please check that this domain has been added to a service.</p>
+<p>Details: cache-lcy-eglc8600028-LCY</p></body></html>
