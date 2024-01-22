@@ -12,3 +12,53 @@ Q1.2 - Quel est le numéro de port utilisé :
 
 Le numéro de port utilisé est le 1234
 
+
+Q3.1 - Vérifiez le fonctionnement en tapant : java ClientHTTP www.univ-rouen.fr
+
+Vous pouvez exécuter la commande suivante dans le terminal pour rediriger la sortie vers un fichier :
+
+java Clienthttp www.univ-rouen.fr > ur.txt
+
+Q3.2 - Le contenu du fichier est-il conforme à ce qui est attendu ?
+
+
+HTTP/1.1 403 Forbidden
+Date: Mon, 22 Jan 2024 09:37:20 GMT
+Server: Apache
+Content-Length: 199
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>403 Forbidden</title>
+</head><body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this resource.</p>
+</body></html>
+
+
+Q3.3 - La sortie est-elle constituée uniquement d’un fichier html conforme ? Pourquoi ?
+La sortie contiendra l'intégralité de la réponse HTTP, y compris les en-têtes et le corps de la réponse. L'inclusion des en-têtes est nécessaire pour obtenir des informations supplémentaires sur la réponse.
+
+Q3.4 - Essayer ensuite avec le site www.javaworld.com Cela fonctionne-t-il correctement ?
+Vous pouvez exécuter la commande avec le nouveau site :
+
+java ClientHTTP www.javaworld.com > javaworld.txt
+
+On constate de nombreuses erreurs 
+
+Q3.5 - A votre avis, pourquoi obtient-on des résultats différents d’un navigateur ?
+Les navigateurs modernes peuvent exécuter des scripts JavaScript, 
+charger des ressources externes, et effectuer d'autres actions qui ne sont pas simulées 
+par ce simple client HTTP. De plus, les sites Web peuvent adapter leur contenu en fonction 
+du type de navigateur ou d'autres informations fournies dans les en-têtes HTTP.
+
+Q3.6 - Analyser la réponse de www.univ-rouen.fr et observez les en-têtes.
+HTTP/1.1 403 Forbidden
+Date: Mon, 22 Jan 2024 09:37:20 GMT
+Server: Apache
+Content-Length: 199
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
