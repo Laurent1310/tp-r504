@@ -7,7 +7,7 @@ public class ClientTCP3 {
             Socket socket = new Socket("localhost", 2016);
 
             // Envoyer la chaîne au serveur
-            String msg = "Bonjour";
+            String msg = "J'adore Linux !";
             DataOutputStream dOut = new DataOutputStream(socket.getOutputStream());
             dOut.writeUTF(msg);
 

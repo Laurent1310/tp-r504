@@ -9,10 +9,11 @@ public class ServeurTCP2 {
 
             while (true) {
                 Socket socket = socketserver.accept();
-                System.out.println("Connection d’un client");
+                System.out.println("Connexion d’un client");
 
                 DataInputStream dIn = new DataInputStream(socket.getInputStream());
-                System.out.println("Message: " + dIn.readUTF());
+                String receivedMsg = dIn.readUTF();
+                System.out.println("Message: " + receivedMsg);
 
                 socket.close();
             }
@@ -21,3 +22,4 @@ public class ServeurTCP2 {
         }
     }
 }
+
