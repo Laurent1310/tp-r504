@@ -1,36 +1,44 @@
-
-
 import java.io.*;
 import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.client.*;
+import org.apache.http.client.methods.*;
+import org.apache.http.impl.client.*;
 
 public class Client1 {
     public static void main(String[] args) {
-        // Q1.2 - Vérifier le nombre d'arguments
-        if (args.length == 0) {
-            System.err.println("Erreur : Veuillez fournir au moins 1 argument.");
+        // Vérification des arguments en ligne de commande
+        if (args.length < 1) {
+            System.err.println("Usage: java Client1 <hostname>");
             System.exit(1);
         }
 
-        // Q1.3 - Création du client et de la requête HTTP
+        // Création du client HTTP et de la requête GET
+        CloseableHttpClient client = HttpClients.createDefault();
+        String url = "http://" + args[0];
+        HttpGet request = new HttpGet(url);
+
         try {
-            // Création du client HTTP
-            CloseableHttpClient client = HttpClients.createDefault();
+            // Exécution de la requête
+            CloseableHttpResponse response = client.execute(request);
+            HttpEntity entity = response.getEntity();
 
-            // Construction de l'URL à partir du premier argument
-            String url = "http://" + args[0];
+            // Traitement de la réponse (vous pouvez afficher ou sauvegarder le contenu ici)
+            if (entity != null) {
+                InputStream content = entity.getContent();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+            }
 
-            // Création de la requête HTTP GET
-            HttpGet request = new HttpGet(url);
+            // Fermeture des ressources
+            response.close();
+            client.close();
 
-            // Reste du code à ajouter pour l'envoi de la requête et la gestion de la réponse
-            // ...
-
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
+
