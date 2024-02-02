@@ -1,14 +1,15 @@
 import java.io.*;
+import javax.json.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.*;
 import org.apache.http.client.methods.*;
 import org.apache.http.impl.client.*;
 
-public class Client1 {
+public class Client2 {
     public static void main(String[] args) {
         // Vérification des arguments en ligne de commande
         if (args.length < 1) {
-            System.err.println("Usage: java Client1 <hostname>");
+            System.err.println("Usage: java Client2 <hostname>");
             System.exit(1);
         }
 
@@ -30,13 +31,25 @@ public class Client1 {
             // Traitement de la réponse
             if (entity != null) {
                 InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                InputStreamReader isr = new InputStreamReader(content);
 
-                // Lecture de la réponse ligne par ligne et affichage à l'écran
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    System.out.println(line);
-                }
+                // Création du lecteur JSON
+                JsonReader reader = Json.createReader(isr);
+
+                // Récupération de l'objet JSON principal
+                JsonObject jsonObject = reader.readObject();
+
+                // Fermeture du lecteur JSON et du flux
+                reader.close();
+                isr.close();
+
+                // Accès à la valeur de la clé "Runtime" (durée du film)
+                String runtime = jsonObject.getString("Runtime");
+                System.out.println("Durée du film : " + runtime);
+
+                // Accès à la valeur de la clé "Year" (année de sortie)
+                String year = jsonObject.getString("Year");
+                System.out.println("Année de sortie : " + year);
             }
 
             // Fermeture des ressources

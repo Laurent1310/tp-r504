@@ -12,15 +12,10 @@ public class Client1 {
             System.exit(1);
         }
 
-        // Clé API OMDb (remplacez XXXXX par votre clé)
-        String apiKey = "751ea6aa";
-
-        // Création de l'URL de requête à l'API OMDb avec la clé API
-        String omdbUrl = "http://www.omdbapi.com/?apikey=" + apiKey + "&t=Avengers";
-
         // Création du client HTTP et de la requête GET
         CloseableHttpClient client = HttpClients.createDefault();
-        HttpGet request = new HttpGet(omdbUrl);
+        String url = "http://" + args[0];
+        HttpGet request = new HttpGet(url);
 
         try {
             // Exécution de la requête
@@ -31,12 +26,17 @@ public class Client1 {
             if (entity != null) {
                 InputStream content = entity.getContent();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(content));
-
-                // Lecture de la réponse ligne par ligne et affichage à l'écran
+                
+                // Lecture de la réponse ligne par ligne
+                StringBuffer result = new StringBuffer();
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    System.out.println(line);
+                    result.append(line).append("\n");
                 }
+                
+                // Affichage de la page à l'écran
+                String page = result.toString();
+                System.out.println(page);
             }
 
             // Fermeture des ressources
