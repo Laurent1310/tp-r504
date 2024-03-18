@@ -1,0 +1,1 @@
+Scan debsecan effectué avec succès, voici le nombre de vulnérabilités : 0

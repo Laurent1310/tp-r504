@@ -1,0 +1,14 @@
+q1 : 867
+q2 : debsecan --suite bullseye | wc -l      867
+q3 : debsecan --suite bullseye --only-fixed | wc -l     121
+q4 : debsecan --suite bullseye --only-fixed | wc -l     0
+
+
+q2.9 : sudo lynis audit system | ansi2html -l > rapport-lynis.html
+xdg-open rapport-lynis.html
+résultat :
+45
+
+q2.10 : Hardening index : 64 
+
+

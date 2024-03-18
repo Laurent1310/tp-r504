@@ -1,0 +1,73 @@
+
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+    #vulnerabilitiesChart {
+      max-width: 600px;
+      margin: 20px 0;
+    }
+  </style>
+  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+</head>
+<body>
+  <h1>Rapport de Scan debsecan</h1>
+  <p>Date du scan : 2024-03-12</p>
+  <p>Heure du scan : 15:51:37</p>
+  <p>Nombre de vulnérabilités détectées : 0</p>
+  <p>Total des tests effectués : 4</p>
+  <p>Total des vulnérabilités détectées : 0</p>
+
+  <h2>Historique des tests</h2>
+  <ul>
+    <li>2024-03-12 15:51:37 - Scan debsecan effectué avec succès. Nombre de vulnérabilités : 0</li>
+<li>2024-03-12 15:51:36 - Scan debsecan effectué avec succès. Nombre de vulnérabilités : 0</li>
+<li>2024-03-12 15:51:34 - Scan debsecan effectué avec succès. Nombre de vulnérabilités : 0</li>
+<li>2024-03-12 15:50:55 - Scan debsecan effectué avec succès. Nombre de vulnérabilités : 0</li>
+  </ul>
+
+  <h2>Graphique des vulnérabilités au fil du temps</h2>
+  <canvas id='vulnerabilitiesChart'></canvas>
+
+  <script>
+    var ctx = document.getElementById('vulnerabilitiesChart').getContext('2d');
+    var vulnerabilitiesData = {
+      labels: 2024-03-12 15:51:37
+2024-03-12 15:51:36
+2024-03-12 15:51:34
+2024-03-12 15:50:55,
+      datasets: [{
+        label: 'Nombre de vulnérabilités',
+        data: 0
+0
+0
+0,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    };
+    var vulnerabilitiesChart = new Chart(ctx, {
+      type: 'line',
+      data: vulnerabilitiesData,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
